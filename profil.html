@@ -5,12 +5,20 @@
   <meta charset="UTF-8">
   <title>Din profil</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="manifest" href="manifest.json">
   <link rel="stylesheet" href="style.css">
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('service-worker.js');
+      });
+    }
+  </script>
 </head>
 <body>
   <div class="profile-card">
     <div class="avatar-section">
-      <img src="https://api.dicebear.com/7.x/pixel-art/svg?seed=profil" alt="Avatar" class="avatar">
+      <img src="icon-192.png" alt="Avatar" class="avatar">
       <h2>👤 Velkommen, <span id="navn"></span>!</h2>
       <p class="rank">💠 Rang: Nybegynner</p>
     </div>
@@ -32,7 +40,6 @@
   </div>
 
   <script>
-    // Hent data fra localStorage
     document.getElementById("navn").textContent = localStorage.getItem("fornavn") || "Innovator";
     document.getElementById("navn-full").textContent = (localStorage.getItem("fornavn") || "") + " " + (localStorage.getItem("etternavn") || "");
     document.getElementById("epost").textContent = localStorage.getItem("epost") || "-";
@@ -40,7 +47,6 @@
     document.getElementById("verver").textContent = localStorage.getItem("verver") || "-";
     document.getElementById("konto").textContent = localStorage.getItem("konto") || "-";
 
-    // Nedtelling
     let sek = 3600;
     const el = document.getElementById("countdown");
     setInterval(() => {

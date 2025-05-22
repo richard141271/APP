@@ -5,8 +5,11 @@ self.addEventListener('install', event => {
       return cache.addAll([
         'index.html',
         'profil.html',
+        'kunst.html',
         'style.css',
-        'manifest.json'
+        'manifest.json',
+        'icon-192.png',
+        'icon-512.png'
       ]);
     })
   );

@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <title>Kunstmodul</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('service-worker.js');
+      });
+    }
+  </script>
+</head>
+<body>
+  <div class="profile-card">
+    <h2>🎨 Last opp og registrer din kunst</h2>
+    <p>Her kan du laste opp og registrere dine digitale og fysiske kunstverk, samt knytte dem til en NFT og egen beholdning.</p>
+
+    <form>
+      <h3>➕ Legg til nytt kunstverk</h3>
+      <label>Verkets tittel:<br><input type="text" style="width: 100%;"></label><br><br>
+      <label>Beskrivelse:<br><textarea style="width: 100%;" rows="4"></textarea></label><br><br>
+      <label>Opplast kunstverk (bilde eller fil):<br><input type="file"></label><br><br>
+      <label>Opplast dokumentasjon (ekthetsbevis, brev, etc):<br><input type="file" multiple></label><br><br>
+      <label>Verkets verdi (NOK):<br><input type="number" style="width: 100%;"></label><br><br>
+      <label><input type="checkbox"> Lag NFT av verket og registrer på blockchain</label><br><br>
+      <button type="submit">🖼️ Registrer kunstverk</button>
+    </form>
+
+    <h3>📦 Din kunstbeholdning</h3>
+    <table style="width:100%; margin-top: 10px;">
+      <thead><tr><th>Tittel</th><th>Verdi</th><th>NFT?</th></tr></thead>
+      <tbody><tr><td colspan="3" style="text-align:center;">(Ingenting registrert ennå)</td></tr></tbody>
+    </table>
+
+    <button style="margin-top: 15px;">🖨️ Skriv ut / Del</button>
+  </div>
+</body>
+</html>
