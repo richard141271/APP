@@ -1,58 +1,10 @@
 
-body {
-  background-color: #000;
-  color: #fff;
-  font-family: 'Segoe UI', sans-serif;
-  margin: 0;
-  padding: 20px;
-  text-align: center;
-}
-
-.profile-card {
-  background: #121223;
-  padding: 25px;
-  border-radius: 15px;
-  width: 100%;
-  max-width: 420px;
-  margin: auto;
-  color: white;
-  text-align: center;
-  box-shadow: 0 0 20px rgba(0, 255, 225, 0.2);
-}
-
-.avatar-section {
-  margin-bottom: 20px;
-}
-
-.avatar {
-  width: 80px;
-  border-radius: 10px;
-  margin-bottom: 10px;
-}
-
-.rank {
-  color: #00ffe1;
-  font-weight: bold;
-}
-
-.info p, .rewards p {
-  margin: 8px 0;
-}
-
-input[type="text"], input[type="email"], input[type="password"], input[type="number"], textarea {
-  width: 100%;
-  padding: 6px;
-  margin-bottom: 10px;
-  border-radius: 6px;
-  border: none;
-}
-
-button {
-  background: #00ffe1;
-  border: none;
-  border-radius: 6px;
-  padding: 10px;
-  font-weight: bold;
-  cursor: pointer;
-  width: 100%;
-}
+body {background-color:#000;color:#fff;font-family:'Segoe UI',sans-serif;margin:0;padding:20px;text-align:center;}
+.profile-card {background:#121223;padding:25px;border-radius:15px;width:100%;max-width:420px;margin:auto;
+box-shadow:0 0 20px rgba(0,255,225,0.2);}
+.avatar-section {margin-bottom:20px;}
+.avatar {width:80px;border-radius:10px;margin-bottom:10px;}
+.rank {color:#00ffe1;font-weight:bold;}
+.info p, .rewards p {margin:8px 0;}
+input, textarea, button {width:100%;padding:8px;border-radius:6px;margin-bottom:10px;border:none;}
+button {background:#00ffe1;font-weight:bold;cursor:pointer;}
