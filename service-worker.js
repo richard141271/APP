@@ -1,7 +1,7 @@
 
 self.addEventListener('install', event => {
   event.waitUntil(
-    caches.open('ai-innovate-cache').then(cache => {
+    caches.open('ai-innovate-cache.v.2').then(cache => {
       return cache.addAll([
         'index.html',
         'profil.html',
